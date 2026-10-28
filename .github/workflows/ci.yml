@@ -24,3 +24,17 @@ jobs:
 
       - name: Run tests
         run: pytest -v lab_3_pipeline
+
+      - name: Start Flask Server in Background
+        working-directory: lab_4_api_tests
+        run: |
+          FLASK_APP=app.py flask run &
+          # Wait until the server answers (max ~15s)
+          echo "Flask did not start" && exit 1
+
+      - name: Install Newman (Postman CLI)
+        run: npm install -g newman
+
+      - name: Run Postman Tests with Newman
+        working-directory: lab_4_api_tests
+        run: newman run collection.json -e environment.json

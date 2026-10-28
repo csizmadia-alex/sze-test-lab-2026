@@ -1,0 +1,21 @@
+{
+	"id": "9e6c4150-cc9b-4b51-a83e-9e98324310ad",
+	"name": "Test_lab_20261028",
+	"values": [
+		{
+			"key": "baseURL",
+			"value": "http://127.0.0.1:5000",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "newTodoId",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2026-10-28T17:02:06.425Z",
+	"_postman_exported_using": "Postman/11.72.3"
+}
